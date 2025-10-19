@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test_E2E">
+		<parameter name="browser" value="Chrome"></parameter>
+		<groups>
+			<run>
+				<include name="E2E"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="TestCases.CheckoutPageTest" />
+			<class name="TestCases.AccountCreationPageTest" />
+			<class name="TestCases.OrderPlacedTest" />
+			<class name="TestCases.PaymentPageTest" />
+			<class name="TestCases.ViewCartPageTest" />
+			<class name="TestCases.IndexPageTest" />
+			<class name="TestCases.LoginPageTest" />
+			<class name="TestCases.ProductPageTest" />
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

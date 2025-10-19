@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [CrossBrowser]" guice-stage="DEVELOPMENT">
+  <test thread-count="3" parallel="tests" name="Cross_Browser_Edge(failed)">
+    <parameter name="browser" value="Edge"/>
+    <classes>
+      <class name="TestCases.IndexPageTest">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="TearDown"/>
+          <include name="loadConfigs"/>
+          <include name="myStoreLogo"/>
+          <include name="verifyTitle"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- TestCases.IndexPageTest -->
+    </classes>
+  </test> <!-- Cross_Browser_Edge(failed) -->
+</suite> <!-- Failed suite [CrossBrowser] -->

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Utilities.ListenerClass"/>
+  </listeners>
+  <test thread-count="5" name="Test_Smoke(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="TestCases.LoginPageTest">
+        <methods>
+          <include name="LoginTest" invocation-numbers="0 2"/>
+          <include name="TearDown"/>
+          <include name="extentmangerEndReport"/>
+          <include name="LoadConfigs"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- TestCases.LoginPageTest -->
+      <class name="TestCases.CheckoutPageTest">
+        <methods>
+          <include name="TillPlaceOrder"/>
+          <include name="extentmangerEndReport"/>
+          <include name="setUp"/>
+          <include name="LoadConfigs"/>
+          <include name="TearDown"/>
+        </methods>
+      </class> <!-- TestCases.CheckoutPageTest -->
+    </classes>
+  </test> <!-- Test_Smoke(failed) -->
+</suite> <!-- Failed suite [Suite] -->
