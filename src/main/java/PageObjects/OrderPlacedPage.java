@@ -10,7 +10,7 @@ import BaseClass.BaseClass;
 public class OrderPlacedPage extends BaseClass{
 
 	public OrderPlacedPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 		
 	}
 	
@@ -22,7 +22,7 @@ public class OrderPlacedPage extends BaseClass{
 	@FindBy(xpath= "//a[contains(text(),'Continue')]") WebElement continuebtn;
 	
 	public IndexPage clickOnContinue() {
-		Action.JSClick(driver, continuebtn);
+		Action.JSClick(getDriver(), continuebtn);
 		return new IndexPage();
 	}
 }

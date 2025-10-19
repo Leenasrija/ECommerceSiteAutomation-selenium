@@ -10,7 +10,7 @@ import BaseClass.BaseClass;
 public class ViewCartPage extends BaseClass{
 	
 	public ViewCartPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	@FindBy(xpath= "//*[@id=\"do_action\"]/div[1]//a") WebElement checkoutbtn;
@@ -20,14 +20,14 @@ public class ViewCartPage extends BaseClass{
 	
 	public LoginPage clickCheckout() {
 		Action.isDisplayed(checkoutbtn);
-		Action.click(driver, checkoutbtn);
-		Action.JSClick(driver, RegisterorLogin);
+		Action.click(getDriver(), checkoutbtn);
+		Action.JSClick(getDriver(), RegisterorLogin);
 		return new LoginPage();
 	}
 	
 	public PaymentPage clickOnPlaceOrder() {
-		Action.scrollintoView(driver, Placeorderbtn);
-		Action.JSClick(driver, Placeorderbtn);
+		Action.scrollintoView(getDriver(), Placeorderbtn);
+		Action.JSClick(getDriver(), Placeorderbtn);
 		return new PaymentPage();
 	}
 	@FindBy(xpath= "//li[contains(text(),'Shopping Cart')]") WebElement shoppingcart;
@@ -39,7 +39,7 @@ public class ViewCartPage extends BaseClass{
 	
 	public CheckoutPage clickonProceedtoCheckoutWithLogin() {
 		 Action.isDisplayed(proceedtoCheckout);
-		 Action.JSClick(driver, proceedtoCheckout);
+		 Action.JSClick(getDriver(), proceedtoCheckout);
 		 return new CheckoutPage();
 	}
 	
@@ -48,9 +48,9 @@ public class ViewCartPage extends BaseClass{
 	
 	public LoginPage clickonProceedtoCheckoutWithoutLogin() {
 		 Action.isDisplayed(proceedtoCheckout);
-		 Action.JSClick(driver, proceedtoCheckout);
+		 Action.JSClick(getDriver(), proceedtoCheckout);
 		 if(Action.isDisplayed(reuqestLogin)) {
-			 Action.JSClick(driver, loginregisterlink);
+			 Action.JSClick(getDriver(), loginregisterlink);
 			 return new LoginPage();
 		 }
 		 else {

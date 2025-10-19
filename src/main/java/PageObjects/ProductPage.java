@@ -18,7 +18,7 @@ public class ProductPage extends BaseClass{
 	@FindBy(xpath= "//h2[contains(text(), \"Blue Top\")]") WebElement bluetop;
 
 	public ProductPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	public boolean verifyIfProductDisplayed() {
@@ -30,7 +30,7 @@ public class ProductPage extends BaseClass{
 	@FindBy(xpath= "//u[contains(text(),'View Cart')]") WebElement clicktoViewCart;
 
 	public boolean clickAddtoCart() {
-		Action.JSClick(driver, addtoCartbtn);
+		Action.JSClick(getDriver(), addtoCartbtn);
 		try {
 			Thread.sleep(10000);
 		} catch (InterruptedException e) {
@@ -40,7 +40,7 @@ public class ProductPage extends BaseClass{
 		return Action.isDisplayed(productAdded);
 	}
 	public ViewCartPage clickViewCart() {
-		Action.JSClick(driver, clicktoViewCart);
+		Action.JSClick(getDriver(), clicktoViewCart);
 		return new ViewCartPage();
 	}
 }

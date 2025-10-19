@@ -6,10 +6,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import ActionDriver.Action;
 import BaseClass.BaseClass;
+import Utilities.Log;
 
 public class LoginPage extends BaseClass{
 	public LoginPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	@FindBy(xpath="//input[@data-qa='login-password']") WebElement password;
@@ -23,14 +24,14 @@ public class LoginPage extends BaseClass{
 	public IndexPage Login(String userName, String passWord) {
 		Action.enterText(email, userName);
 		Action.enterText(password, passWord);
-		Action.click(driver, loginBtn);
+		Action.click(getDriver(), loginBtn);
 		return new IndexPage();
 	}
 	
 	public AccountCreationPage CreateAccount(String userName, String email) {
 		Action.enterText(name, userName);
 		Action.enterText(signupEmail, email);
-		Action.click(driver, createAccBtn);
+		Action.click(getDriver(), createAccBtn);
 		return new AccountCreationPage();
 	}
 }

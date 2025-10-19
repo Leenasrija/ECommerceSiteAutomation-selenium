@@ -3,7 +3,6 @@ package TestCases;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.*;
-import org.testng.annotations.BeforeMethod;
 
 import BaseClass.BaseClass;
 import PageObjects.AccountCreationPage;
@@ -16,16 +15,17 @@ public class ProductPageTest extends BaseClass{
 	ProductPage productpage;
 	AccountCreationPage accoutcreationpage;
 	ViewCartPage viewcartpage;
-	@BeforeMethod
-	public void setUp() {
-		launchBrowser();
+	@BeforeMethod(groups = {"Smoke", "Sanity", "Regression", "E2E"})
+	@Parameters("browser")
+	public void setUp(String browser) {
+		launchBrowser(browser);
 	}
 	
-	@AfterMethod
+	@AfterMethod(groups = {"Smoke", "Sanity", "Regression", "E2E"})
 	public void TearDown() {
-		driver.quit();
+		getDriver().quit();
 	}
-	@Test
+	@Test(groups = "Smoke")
 	public void validateProduct() {
 		indexpage = new IndexPage();
 		if(indexpage.isProductDisplayed()) {

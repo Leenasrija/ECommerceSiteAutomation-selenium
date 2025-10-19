@@ -11,14 +11,15 @@ public class AccountCreationPageTest extends BaseClass{
 	LoginPage loginpage;
 	IndexPage indexpage;
 	AccountCreationPage accoutcreationpage;
-	@BeforeMethod
-	public void setUp() {
-		launchBrowser();
+	@BeforeMethod(groups = {"Smoke", "Sanity", "Regression", "E2E"})
+	@Parameters("browser")
+	public void setUp(String browser) {
+		launchBrowser(browser);
 	}
 	
-	@AfterMethod
+	@AfterMethod(groups = {"Smoke", "Sanity", "Regression", "E2E"})
 	public void tearDown() {
-		driver.quit();
+		getDriver().quit();
 	}
 	
 	//@Test
@@ -34,7 +35,7 @@ public class AccountCreationPageTest extends BaseClass{
 			e.printStackTrace();
 		}
 	}
-	@Test
+	@Test(groups = "Sanity")
 	public void enterAccountcreationDetails() {
 		indexpage = new IndexPage();
 		loginpage = indexpage.clickOnSignIn();

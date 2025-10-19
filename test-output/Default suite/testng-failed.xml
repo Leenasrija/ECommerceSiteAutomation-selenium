@@ -3,14 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.OrderPlacedTest">
+      <class name="TestCases.LoginPageTest">
         <methods>
-          <include name="TearDown"/>
-          <include name="CompleteE2EFlowPreLogin"/>
+          <include name="beforeSuite"/>
+          <include name="LoginTest" invocation-numbers="0 2"/>
           <include name="loadConfigs"/>
+          <include name="TearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- TestCases.OrderPlacedTest -->
+      </class> <!-- TestCases.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

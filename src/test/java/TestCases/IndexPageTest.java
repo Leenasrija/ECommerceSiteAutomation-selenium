@@ -13,23 +13,23 @@ import PageObjects.IndexPage;
 public class IndexPageTest extends BaseClass{
 	IndexPage index;
 	ProductPage product;
-	@BeforeMethod
-	public void setUp() {
-		launchBrowser();
+	@BeforeMethod(groups = {"Smoke", "Sanity", "Regression", "E2E"})
+	@Parameters("browser")
+	public void setUp(String browser) {
+		launchBrowser(browser);
 	}
-	
-	@AfterMethod
+	@AfterMethod(groups = {"Smoke", "Sanity", "Regression", "E2E"})
 	public void TearDown() {
-		driver.quit();
+		getDriver().quit();
 	}
 	
-	@Test
+	@Test(groups = {"Regression", "Sanity"})
 	public void myStoreLogo(){
 		index = new IndexPage();
 		Assert.assertTrue(index.isLogoDisplayed());
 	}
 	
-	@Test
+	@Test(groups = {"Regression", "Sanity"})
 	public void verifyTitle() {
 		Assert.assertEquals(index.getDtoreTitle(), "Automation Exercise");
 	}

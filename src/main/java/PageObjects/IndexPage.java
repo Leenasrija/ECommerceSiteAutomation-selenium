@@ -14,11 +14,11 @@ public class IndexPage extends BaseClass{
 	
 	
 	public IndexPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	public LoginPage clickOnSignIn() {
-		Action.click(driver, loginbtn);
+		Action.click(getDriver(), loginbtn);
 		return new LoginPage();
 	}
 	
@@ -27,7 +27,7 @@ public class IndexPage extends BaseClass{
 	}
 	
 	public String getDtoreTitle() {
-		return Action.getTitle(driver);
+		return Action.getTitle(getDriver());
 	}
 	@FindBy(xpath="//*[@id=\"header\"]//b") WebElement loggedinName;
 	@FindBy(xpath="//a[@href='/product_details/1']") WebElement productLink;
@@ -38,12 +38,12 @@ public class IndexPage extends BaseClass{
 	}
 	
 	public boolean isProductDisplayed() {
-		return Action.scrollintoView(driver, productLink);
+		return Action.scrollintoView(getDriver(), productLink);
 	}
 	
 	public ProductPage clickOnProduct() {
-		if(Action.scrollintoView(driver, productLink)) {
-			Action.click(driver, productLink);
+		if(Action.scrollintoView(getDriver(), productLink)) {
+			Action.click(getDriver(), productLink);
 			return new ProductPage();
 		}
 		else {
@@ -54,7 +54,7 @@ public class IndexPage extends BaseClass{
 	
 	@FindBy(xpath="//a[contains(text(), ' Cart')]") WebElement cartButton;
 	public ViewCartPage clickOncart() {
-		Action.click(driver, cartButton);
+		Action.click(getDriver(), cartButton);
 		return new ViewCartPage();
 		
 	}

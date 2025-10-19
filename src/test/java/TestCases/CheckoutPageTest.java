@@ -2,6 +2,7 @@ package TestCases;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -22,16 +23,17 @@ public class CheckoutPageTest extends BaseClass{
 	ViewCartPage viewcartpage;
 	PaymentPage paymentpage;
 	CheckoutPage checkoutpage;
-	@BeforeMethod
-	public void setUp() {
-		launchBrowser();
+	@BeforeMethod(groups = {"Smoke", "Sanity", "Regression", "E2E"})
+	@Parameters("browser")
+	public void setUp(String browser) {
+		launchBrowser(browser);
 	}
 	
-	@AfterMethod
+	@AfterMethod(groups = {"Smoke", "Sanity", "Regression", "E2E"})
 	public void TearDown() {
-		driver.quit();
+		getDriver().quit();
 	}
-	@Test
+	@Test(groups = "Sanity")
 	public void TillPlaceOrder() throws InterruptedException {
 		indexpage = new IndexPage();
 		SoftAssert assertt = new SoftAssert();

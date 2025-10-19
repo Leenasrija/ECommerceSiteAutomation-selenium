@@ -9,7 +9,7 @@ import BaseClass.BaseClass;
 
 public class AccountCreationPage extends BaseClass{
 	public AccountCreationPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	@FindBy(xpath= "//b[contains(text(),'Enter Account Information')]") WebElement formTitle;
@@ -27,7 +27,7 @@ public class AccountCreationPage extends BaseClass{
 	}
 	
 	public void enterAccountCreationdetails(String passWord, String day, String month, String year) {
-		Action.click(driver, genderselection);
+		Action.click(getDriver(), genderselection);
 		Action.enterText(password, passWord);
 		Action.selectDropdown(date, day);
 		Action.selectDropdown(months, month);

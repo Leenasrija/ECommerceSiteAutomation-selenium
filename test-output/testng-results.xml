@@ -1,29 +1,495 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="12" passed="9" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-18T23:37:11 IST" name="Default suite" finished-at="2025-10-18T23:37:58 IST" duration-ms="47312">
+  <suite started-at="2025-10-19T15:14:44 IST" name="Suite" finished-at="2025-10-19T15:33:01 IST" duration-ms="1097770">
     <groups>
+      <group name="Sanity">
+        <method signature="AccountCreationPageTest.enterAccountcreationDetails()[pri:0, instance:TestCases.AccountCreationPageTest@5656be13]" name="enterAccountcreationDetails" class="TestCases.AccountCreationPageTest"/>
+        <method signature="CheckoutPageTest.TillPlaceOrder()[pri:0, instance:TestCases.CheckoutPageTest@47eaca72]" name="TillPlaceOrder" class="TestCases.CheckoutPageTest"/>
+        <method signature="IndexPageTest.myStoreLogo()[pri:0, instance:TestCases.IndexPageTest@77888435]" name="myStoreLogo" class="TestCases.IndexPageTest"/>
+        <method signature="IndexPageTest.verifyTitle()[pri:0, instance:TestCases.IndexPageTest@77888435]" name="verifyTitle" class="TestCases.IndexPageTest"/>
+        <method signature="LoginPageTest.LoginTest(java.lang.String,java.lang.String)[pri:0, instance:TestCases.LoginPageTest@73a1e9a9]" name="LoginTest" class="TestCases.LoginPageTest"/>
+        <method signature="OrderPlacedTest.CompleteE2EFlowPostLogin()[pri:0, instance:TestCases.OrderPlacedTest@4218d6a3]" name="CompleteE2EFlowPostLogin" class="TestCases.OrderPlacedTest"/>
+        <method signature="OrderPlacedTest.CompleteE2EFlowPreLogin()[pri:0, instance:TestCases.OrderPlacedTest@4218d6a3]" name="CompleteE2EFlowPreLogin" class="TestCases.OrderPlacedTest"/>
+      </group> <!-- Sanity -->
+      <group name="Regression">
+        <method signature="IndexPageTest.myStoreLogo()[pri:0, instance:TestCases.IndexPageTest@77888435]" name="myStoreLogo" class="TestCases.IndexPageTest"/>
+        <method signature="IndexPageTest.verifyTitle()[pri:0, instance:TestCases.IndexPageTest@77888435]" name="verifyTitle" class="TestCases.IndexPageTest"/>
+        <method signature="PaymentPageTest.TillPlaceOrder()[pri:0, instance:TestCases.PaymentPageTest@76505305]" name="TillPlaceOrder" class="TestCases.PaymentPageTest"/>
+        <method signature="ViewCartPageTest.validateCartPage()[pri:0, instance:TestCases.ViewCartPageTest@14cd1699]" name="validateCartPage" class="TestCases.ViewCartPageTest"/>
+      </group> <!-- Regression -->
+      <group name="E2E">
+        <method signature="OrderPlacedTest.CompleteE2EFlowPostLogin()[pri:0, instance:TestCases.OrderPlacedTest@4218d6a3]" name="CompleteE2EFlowPostLogin" class="TestCases.OrderPlacedTest"/>
+        <method signature="OrderPlacedTest.CompleteE2EFlowPreLogin()[pri:0, instance:TestCases.OrderPlacedTest@4218d6a3]" name="CompleteE2EFlowPreLogin" class="TestCases.OrderPlacedTest"/>
+      </group> <!-- E2E -->
+      <group name="Smoke">
+        <method signature="ProductPageTest.validateProduct()[pri:0, instance:TestCases.ProductPageTest@71d44a3]" name="validateProduct" class="TestCases.ProductPageTest"/>
+      </group> <!-- Smoke -->
     </groups>
-    <test started-at="2025-10-18T23:37:11 IST" name="Default test" finished-at="2025-10-18T23:37:58 IST" duration-ms="47312">
-      <class name="TestCases.ProductPageTest">
-        <test-method is-config="true" signature="loadConfigs()[pri:0, instance:TestCases.ProductPageTest@3c19aaa5]" started-at="2025-10-18T23:37:11 IST" name="loadConfigs" finished-at="2025-10-18T23:37:11 IST" duration-ms="49" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loadConfigs -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:TestCases.ProductPageTest@3c19aaa5]" started-at="2025-10-18T23:37:11 IST" name="setUp" finished-at="2025-10-18T23:37:28 IST" duration-ms="16629" status="PASS">
+    <test started-at="2025-10-19T15:14:44 IST" name="Test_Smoke" finished-at="2025-10-19T15:33:01 IST" duration-ms="1097770">
+      <class name="TestCases.PaymentPageTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.PaymentPageTest@76505305]" started-at="2025-10-19T15:23:41 IST" name="setUp" finished-at="2025-10-19T15:23:54 IST" duration-ms="12263" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validateProduct()[pri:0, instance:TestCases.ProductPageTest@3c19aaa5]" started-at="2025-10-18T23:37:28 IST" name="validateProduct" finished-at="2025-10-18T23:37:57 IST" duration-ms="29681" status="PASS">
+        <test-method signature="TillPlaceOrder()[pri:0, instance:TestCases.PaymentPageTest@76505305]" started-at="2025-10-19T15:23:54 IST" name="TillPlaceOrder" finished-at="2025-10-19T15:25:06 IST" duration-ms="72550" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TillPlaceOrder -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:TestCases.PaymentPageTest@76505305]" started-at="2025-10-19T15:25:06 IST" name="TearDown" finished-at="2025-10-19T15:25:07 IST" duration-ms="1086" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- TestCases.PaymentPageTest -->
+      <class name="TestCases.ViewCartPageTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.ViewCartPageTest@14cd1699]" started-at="2025-10-19T15:25:07 IST" name="setUp" finished-at="2025-10-19T15:25:20 IST" duration-ms="12178" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateCartPage()[pri:0, instance:TestCases.ViewCartPageTest@14cd1699]" started-at="2025-10-19T15:25:20 IST" name="validateCartPage" finished-at="2025-10-19T15:26:28 IST" duration-ms="68498" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCartPage -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:TestCases.ViewCartPageTest@14cd1699]" started-at="2025-10-19T15:26:28 IST" name="TearDown" finished-at="2025-10-19T15:26:30 IST" duration-ms="2164" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- TestCases.ViewCartPageTest -->
+      <class name="TestCases.CheckoutPageTest">
+        <test-method is-config="true" signature="LoadConfigs()[pri:0, instance:TestCases.CheckoutPageTest@47eaca72]" started-at="2025-10-19T15:14:42 IST" name="LoadConfigs" finished-at="2025-10-19T15:14:44 IST" duration-ms="1516" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoadConfigs -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.CheckoutPageTest@47eaca72]" started-at="2025-10-19T15:14:44 IST" name="setUp" finished-at="2025-10-19T15:16:43 IST" duration-ms="119656" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TillPlaceOrder()[pri:0, instance:TestCases.CheckoutPageTest@47eaca72]" started-at="2025-10-19T15:16:43 IST" name="TillPlaceOrder" finished-at="2025-10-19T15:19:31 IST" duration-ms="167466" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[timeout: Timed out receiving message from renderer: 120.000
+  (Session info: chrome=141.0.7390.66)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b8feca06ccd859719fb156f3ff78078e, actions {actions=[org.openqa.selenium.interactions.Sequence@523d6bdb]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.66, chrome: {chromedriverVersion: 141.0.7390.78 (2b53b0e231fc..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57865}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57865/devtoo..., se:cdpVersion: 141.0.7390.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b8feca06ccd859719fb156f3ff78078e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 120.000
+  (Session info: chrome=141.0.7390.66)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b8feca06ccd859719fb156f3ff78078e, actions {actions=[org.openqa.selenium.interactions.Sequence@523d6bdb]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.66, chrome: {chromedriverVersion: 141.0.7390.78 (2b53b0e231fc..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57865}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57865/devtoo..., se:cdpVersion: 141.0.7390.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b8feca06ccd859719fb156f3ff78078e
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:643)
+at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:616)
+at ActionDriver.Action.click(Action.java:36)
+at PageObjects.LoginPage.Login(LoginPage.java:27)
+at TestCases.CheckoutPageTest.TillPlaceOrder(CheckoutPageTest.java:49)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TillPlaceOrder -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:TestCases.CheckoutPageTest@47eaca72]" started-at="2025-10-19T15:19:32 IST" name="TearDown" finished-at="2025-10-19T15:19:34 IST" duration-ms="1739" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="extentmangerEndReport()[pri:0, instance:TestCases.CheckoutPageTest@47eaca72]" started-at="2025-10-19T15:33:02 IST" name="extentmangerEndReport" finished-at="2025-10-19T15:33:04 IST" duration-ms="2641" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentmangerEndReport -->
+      </class> <!-- TestCases.CheckoutPageTest -->
+      <class name="TestCases.OrderPlacedTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.OrderPlacedTest@4218d6a3]" started-at="2025-10-19T15:20:22 IST" name="setUp" finished-at="2025-10-19T15:20:42 IST" duration-ms="20557" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="CompleteE2EFlowPostLogin()[pri:0, instance:TestCases.OrderPlacedTest@4218d6a3]" started-at="2025-10-19T15:20:42 IST" name="CompleteE2EFlowPostLogin" finished-at="2025-10-19T15:22:05 IST" duration-ms="83292" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CompleteE2EFlowPostLogin -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:TestCases.OrderPlacedTest@4218d6a3]" started-at="2025-10-19T15:22:05 IST" name="TearDown" finished-at="2025-10-19T15:22:08 IST" duration-ms="2621" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.OrderPlacedTest@4218d6a3]" started-at="2025-10-19T15:22:08 IST" name="setUp" finished-at="2025-10-19T15:22:20 IST" duration-ms="11621" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="CompleteE2EFlowPreLogin()[pri:0, instance:TestCases.OrderPlacedTest@4218d6a3]" started-at="2025-10-19T15:22:20 IST" name="CompleteE2EFlowPreLogin" finished-at="2025-10-19T15:23:40 IST" duration-ms="80583" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CompleteE2EFlowPreLogin -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:TestCases.OrderPlacedTest@4218d6a3]" started-at="2025-10-19T15:23:40 IST" name="TearDown" finished-at="2025-10-19T15:23:41 IST" duration-ms="1205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- TestCases.OrderPlacedTest -->
+      <class name="TestCases.AccountCreationPageTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.AccountCreationPageTest@5656be13]" started-at="2025-10-19T15:19:34 IST" name="setUp" finished-at="2025-10-19T15:20:00 IST" duration-ms="25793" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="enterAccountcreationDetails()[pri:0, instance:TestCases.AccountCreationPageTest@5656be13]" started-at="2025-10-19T15:20:00 IST" name="enterAccountcreationDetails" finished-at="2025-10-19T15:20:21 IST" duration-ms="20704" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterAccountcreationDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.AccountCreationPageTest@5656be13]" started-at="2025-10-19T15:20:21 IST" name="tearDown" finished-at="2025-10-19T15:20:22 IST" duration-ms="974" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestCases.AccountCreationPageTest -->
+      <class name="TestCases.IndexPageTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.IndexPageTest@77888435]" started-at="2025-10-19T15:26:30 IST" name="setUp" finished-at="2025-10-19T15:26:59 IST" duration-ms="28725" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="myStoreLogo()[pri:0, instance:TestCases.IndexPageTest@77888435]" started-at="2025-10-19T15:26:59 IST" name="myStoreLogo" finished-at="2025-10-19T15:26:59 IST" duration-ms="160" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- myStoreLogo -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:TestCases.IndexPageTest@77888435]" started-at="2025-10-19T15:26:59 IST" name="TearDown" finished-at="2025-10-19T15:27:00 IST" duration-ms="1140" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.IndexPageTest@77888435]" started-at="2025-10-19T15:27:00 IST" name="setUp" finished-at="2025-10-19T15:27:28 IST" duration-ms="27740" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyTitle()[pri:0, instance:TestCases.IndexPageTest@77888435]" started-at="2025-10-19T15:27:28 IST" name="verifyTitle" finished-at="2025-10-19T15:27:28 IST" duration-ms="37" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:TestCases.IndexPageTest@77888435]" started-at="2025-10-19T15:27:28 IST" name="TearDown" finished-at="2025-10-19T15:27:30 IST" duration-ms="1649" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- TestCases.IndexPageTest -->
+      <class name="TestCases.ProductPageTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.ProductPageTest@71d44a3]" started-at="2025-10-19T15:31:35 IST" name="setUp" finished-at="2025-10-19T15:32:02 IST" duration-ms="27418" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateProduct()[pri:0, instance:TestCases.ProductPageTest@71d44a3]" started-at="2025-10-19T15:32:02 IST" name="validateProduct" finished-at="2025-10-19T15:33:00 IST" duration-ms="57753" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateProduct -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:TestCases.ProductPageTest@3c19aaa5]" started-at="2025-10-18T23:37:57 IST" name="TearDown" finished-at="2025-10-18T23:37:58 IST" duration-ms="776" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:TestCases.ProductPageTest@71d44a3]" started-at="2025-10-19T15:33:00 IST" name="TearDown" finished-at="2025-10-19T15:33:01 IST" duration-ms="1608" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
       </class> <!-- TestCases.ProductPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="TestCases.LoginPageTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.LoginPageTest@73a1e9a9]" started-at="2025-10-19T15:27:34 IST" name="setUp" finished-at="2025-10-19T15:28:02 IST" duration-ms="28237" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="LoginTest(java.lang.String,java.lang.String)[pri:0, instance:TestCases.LoginPageTest@73a1e9a9]" started-at="2025-10-19T15:28:02 IST" name="LoginTest" data-provider="credentials" finished-at="2025-10-19T15:29:21 IST" duration-ms="79172" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin@xyz.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@123]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="header"]//b"}
+  (Session info: chrome=141.0.7390.66)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4a56a7fece16b1d9068d84cebf587678, findElement {value=//*[@id="header"]//b, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.66, chrome: {chromedriverVersion: 141.0.7390.78 (2b53b0e231fc..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58874}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58874/devtoo..., se:cdpVersion: 141.0.7390.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4a56a7fece16b1d9068d84cebf587678]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="header"]//b"}
+  (Session info: chrome=141.0.7390.66)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '24.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4a56a7fece16b1d9068d84cebf587678, findElement {value=//*[@id="header"]//b, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.66, chrome: {chromedriverVersion: 141.0.7390.78 (2b53b0e231fc..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58874}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58874/devtoo..., se:cdpVersion: 141.0.7390.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4a56a7fece16b1d9068d84cebf587678
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
+at ActionDriver.Action.isDisplayed(Action.java:42)
+at PageObjects.IndexPage.isLoggedUserNameDisplayed(IndexPage.java:36)
+at TestCases.LoginPageTest.LoginTest(LoginPageTest.java:40)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:TestCases.LoginPageTest@73a1e9a9]" started-at="2025-10-19T15:29:22 IST" name="TearDown" finished-at="2025-10-19T15:29:23 IST" duration-ms="1061" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.LoginPageTest@73a1e9a9]" started-at="2025-10-19T15:29:23 IST" name="setUp" finished-at="2025-10-19T15:29:50 IST" duration-ms="27442" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="LoginTest(java.lang.String,java.lang.String)[pri:0, instance:TestCases.LoginPageTest@73a1e9a9]" started-at="2025-10-19T15:29:50 IST" name="LoginTest" data-provider="credentials" finished-at="2025-10-19T15:30:40 IST" duration-ms="49695" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[adminleena@xyz.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Leena@01]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:TestCases.LoginPageTest@73a1e9a9]" started-at="2025-10-19T15:30:40 IST" name="TearDown" finished-at="2025-10-19T15:30:41 IST" duration-ms="1003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.LoginPageTest@73a1e9a9]" started-at="2025-10-19T15:30:41 IST" name="setUp" finished-at="2025-10-19T15:31:08 IST" duration-ms="27462" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="LoginTest(java.lang.String,java.lang.String)[pri:0, instance:TestCases.LoginPageTest@73a1e9a9]" started-at="2025-10-19T15:31:08 IST" name="LoginTest" data-provider="credentials" finished-at="2025-10-19T15:31:33 IST" duration-ms="24202" status="FAIL">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
+at ActionDriver.Action.enterText(Action.java:60)
+at PageObjects.LoginPage.Login(LoginPage.java:25)
+at TestCases.LoginPageTest.LoginTest(LoginPageTest.java:39)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:TestCases.LoginPageTest@73a1e9a9]" started-at="2025-10-19T15:31:34 IST" name="TearDown" finished-at="2025-10-19T15:31:35 IST" duration-ms="907" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- TestCases.LoginPageTest -->
+    </test> <!-- Test_Smoke -->
+  </suite> <!-- Suite -->
 </testng-results>

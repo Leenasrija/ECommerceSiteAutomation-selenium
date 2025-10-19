@@ -2,34 +2,48 @@ package TestCases;
 
 import org.testng.Assert;
 import org.testng.annotations.*;
-import org.testng.annotations.BeforeMethod;
 
 import BaseClass.BaseClass;
+import DataProvider.DataProviders;
 import PageObjects.AccountCreationPage;
 import PageObjects.IndexPage;
 import PageObjects.LoginPage;
+import Utilities.Log;
 
 public class LoginPageTest extends BaseClass{
 	LoginPage loginpage;
 	IndexPage indexpage;
 	AccountCreationPage accoutcreationpage;
-	@BeforeMethod
-	public void setUp() {
-		launchBrowser();
+	@BeforeMethod(groups = {"Smoke", "Sanity", "Regression", "E2E"})
+	@Parameters("browser")
+	public void setUp(String browser) {
+		launchBrowser(browser);
 	}
 	
-	@AfterMethod
+	@AfterMethod(groups = {"Smoke", "Sanity", "Regression", "E2E"})
 	public void TearDown() {
-		driver.quit();
+		getDriver().quit();
 	}
 	
-	//@Test
-	public void LoginTest() {
+	@Test(dataProvider ="credentials", dataProviderClass= DataProviders.class, groups = "Sanity")
+	//@DataProvider(name = "credentials")
+	public void LoginTest(String username, String password) {
+		Log.startTestCase("LoginTest");
 		indexpage = new IndexPage();
+
+		Log.info("User is going to click on SignIn");
 		loginpage = indexpage.clickOnSignIn();
-		indexpage = loginpage.Login(prop.getProperty("username"), prop.getProperty("password"));
+
+		Log.info("Entering login details");
+	//	indexpage = loginpage.Login(prop.getProperty("username"), prop.getProperty("password"));
+		indexpage = loginpage.Login(username, password);
 		String actualval = indexpage.isLoggedUserNameDisplayed();
+
+		Log.info("verifying is user is logged in");
 		Assert.assertEquals(actualval, prop.getProperty("signupname"));
+
+		Log.info("Login Success");
+		Log.endTestCase("Ended login test");
 	
 	}
 }

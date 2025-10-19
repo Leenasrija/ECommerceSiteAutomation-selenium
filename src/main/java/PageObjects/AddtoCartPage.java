@@ -10,7 +10,7 @@ import BaseClass.BaseClass;
 public class AddtoCartPage extends BaseClass
 {
 	public AddtoCartPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	@FindBy(xpath="//button[@class='btn btn-default cart']") WebElement addtoCartbtn;
@@ -23,15 +23,15 @@ public class AddtoCartPage extends BaseClass
 	}
 	
 	public ViewCartPage addProductToCart() {
-		Action.click(driver, addtoCartbtn);
+		Action.click(getDriver(), addtoCartbtn);
 		if(Action.isDisplayed(clickPopup)) {
-			Action.JSClick(driver, addtoCartbtn);
+			Action.JSClick(getDriver(), addtoCartbtn);
 		}
 		return new ViewCartPage();
 	}
 	
 	public LoginPage registerorLogin() {
-		Action.JSClick(driver, login);
+		Action.JSClick(getDriver(), login);
 		return new LoginPage();
 	}
 	

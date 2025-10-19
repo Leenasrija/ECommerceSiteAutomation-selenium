@@ -10,7 +10,7 @@ import BaseClass.BaseClass;
 public class CheckoutPage extends BaseClass{
 
 	public CheckoutPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	@FindBy(xpath="//li[contains(text(),'Checkout')]") WebElement checkoutpageTitle;
@@ -21,8 +21,8 @@ public class CheckoutPage extends BaseClass{
 	@FindBy(xpath="//a[contains(text(),'Place Order')]") WebElement placeOrderButton;
 	
 	public PaymentPage clickplaceOrderButton() {
-		Action.scrollintoView(driver, placeOrderButton);
-		Action.click(driver, placeOrderButton);
+		Action.scrollintoView(getDriver(), placeOrderButton);
+		Action.click(getDriver(), placeOrderButton);
 		return new PaymentPage();
 	}
 	

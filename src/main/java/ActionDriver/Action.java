@@ -1,10 +1,17 @@
 package ActionDriver;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -76,5 +83,19 @@ public class Action extends BaseClass{
 			name) {
 		Select sel= new Select(element);
 		sel.selectByVisibleText(name);
+	}
+	public static String takeScreenShot(WebDriver driver, String fileName) {
+		TakesScreenshot ts = (TakesScreenshot)driver;
+		File file = ts.getScreenshotAs(OutputType.FILE);
+		String crrentDate = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		String targetFile = System.getProperty("user.dir") + "//Screenshots//"+fileName+ "_" +crrentDate+ ".png";
+		File f = new File(targetFile);
+		try {
+			FileUtils.copyFile(file, f);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return targetFile;
 	}
 }

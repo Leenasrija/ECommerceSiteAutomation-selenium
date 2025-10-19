@@ -9,7 +9,7 @@ import BaseClass.BaseClass;
 public class PaymentPage extends BaseClass {
 
 	public PaymentPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	@FindBy(xpath= "//input[@name=\"name_on_card\"]") WebElement cardName;
@@ -25,8 +25,8 @@ public class PaymentPage extends BaseClass {
 		Action.enterText(cvc, cv);
 		Action.enterText(expiryMonth, expirymonth);
 		Action.enterText(expiryYear, expiryyear);
-		Action.scrollintoView(driver, submitbtn);
-		Action.JSClick(driver, submitbtn);
+		Action.scrollintoView(getDriver(), submitbtn);
+		Action.JSClick(getDriver(), submitbtn);
 		return new OrderPlacedPage();
 	}
 	
